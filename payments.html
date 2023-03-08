@@ -7,55 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
-    <title>UFARM</title>
+    <title>payments</title>
 
     <style>
-        section {
-            border-color: rgb(27, 27, 27);
-            padding: 15px;
-            border-style: solid;
-            background-color: whitesmoke;
-        }
 
-        h1,
-        h2 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: medium;
-        }
     </style>
 </head>
 
 <body>
     <div class="row justify-content-center">
-        <div class="col-md-10">
-
+        <div class="col-md-6">
             
-                <h2>Method of payment</h2>
-            
-                <form>
-                    <input type="radio" name="option" value="">
-                    <label for="option1">cash</label><br>
-                    <input type="radio" name="option" value="">
-                    <label for="option2">mobile money</label><br>
-                </form>
-            
-            <div class="card"></div>
-                <h2>Mode of delivery</h2>
-                <form>
-                    <input type="radio" name="deli" value="">
-                    <label for="del1">pick up</label><br>
-                    <input type="radio" name="deli" value="">
-                    <label for="del2">home delivery</label><br>
-                </form>
-            
-
+                <div class="card-body">
+                    <form action="#" class="">
+                        <div class="form-group">
+                            <label>Method of payment</label>
+                            <label class="form-check">
+                                <input class="form check input" type="radio" name="pay"><span>Cash</span>
+                            </label>
+                            <label class="form-check">
+                                <input class="form-check-input" type="radio" name="pay"><span>Mobile Money</span>
+                            </label>
+                        </div>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
 
 
 
 </body>
-<script src="bootstrap/js/bootstrap.js"></script>
-<script src="bootstrap/js/bootstrap.bundle.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </html>
