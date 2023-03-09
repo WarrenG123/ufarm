@@ -21,4 +21,7 @@ const validate = (event) => {
          firstNameError.style = "color: red"
          error++
     }
+    if(error > 0){
+        event.preventDefault()
+    }
   }
