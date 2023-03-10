@@ -7,12 +7,28 @@ const validate = (event) => {
     let male = document.getElementById("male");
     let female = document.getElementById("female");
     let phoneNumber = document.getElementById("pNum");
+    let ninNumber = document.getElementById("nin");
+    let address = document.getElementById("adr");
+    let timePeriod = document.getElementById("tsa");
+    let ward = document.getElementById("wd");
+    let activities = document.getElementById("act");
+    let regDate = document.getElementById("dr");
+    let uniqueNumber = document.getElementById("uN");
+
     //pick error
     let firstNameError = document.getElementById("fNameErr");
     let secondNameError = document.getElementById("sNameErr");
     let birthDateError = document.getElementById("dbErr");
     let genderError = document.getElementById("gndErr");
     let phoneNumberError = document.getElementById("pNumErr");
+    let ninNumberError = document.getElementById("ninErr");
+    let addressError = document.getElementById("adrErr");
+    let timePeriodError = document.getElementById("tsaErr");
+    let wardError = document.getElementById("wdErr");
+    let activitiesError = document.getElementById("actErr");
+    let regDateError = document.getElementById("drErr");
+   let uniqueNumberError = document.getElementById("uNErr");
+
     //for empty on name
     if (!firstName.value) {
         firstName.style.border = "1px solid red"
@@ -58,7 +74,7 @@ const validate = (event) => {
     //phone number
     const phoneNumberregex = /^\+256\d{9}$/;
     if (!phoneNumber.value) {
-        phoneNumber.style.border = "1px solid red" 
+        phoneNumber.style.border = "1px solid red"
         phoneNumberError.innerHTML = "Please enter your phone number"
         phoneNumberError.style = "color: red"
         error++
@@ -69,6 +85,75 @@ const validate = (event) => {
         phoneNumberError.style = "color: red"
         error++
     }
+    //nin
+    //   const ninNumberregex = /^     $/
+    if (!ninNumber.value) {
+        ninNumber.style.border = "1px solid red"
+        ninNumberError.textContent = "Please enter your NIN number"
+        ninNumberError.style = "color: red"
+        error++
+    }
+    // else if(!ninNumber.value.match(ninNumberregex)){
+    //     ninNumber.style.border = "1px solid red"
+    //     ninNumberError.innerHTML = "NIN has to be in thi format  "
+    //     ninNumberError.style = "color: red"
+    //     error++
+    // }
+    //address
+    if(!address.value){
+        address.style.border = "1px solid red"
+        addressError.innerHTML = "Please indicate where your home is located"
+        addressError.style = "color: red"
+        error++
+    }
+    //time
+    if(!timePeriod.value){
+        timePeriod.style.border = "1px solid red"
+        timePeriodError.textContent = "Please fill in this field"
+        timePeriodError.style = "color: red"
+        error++
+    }
+    else if(timePeriod < 10){
+        timePeriod.style.border = "1px solid red"
+        timePeriodError.textContent = "You must have lived in this area for more than 10 years"
+        timePeriodError.style = "color: red"
+        error++  
+    }
+    //ard
+    if(!ward.value){
+        ward.style.border = "1px solid red"
+        wardError.innerHTML = "Please enter the ward you belong to"
+        wardError.style =  "color: red"
+        error++
+    }
+     //activities
+     if(!activities.value){
+        activities.style.border = "1px solid red"
+        activitiesError.innerHTML = "Please fill in the activities you carry out"
+        activitiesError.style = "color: red"
+        error++
+     }
+     //reg
+     if(!regDate.value){
+        regDate.style.border = "1px solid red"
+        regDateError.textContent = "Please fill in the date"
+        regDateError.style = "color: red"
+        error++
+     }
+     else if(!regDate.value.match(getUTCDate())){
+        regDate.style.border = "1px solid red"
+        regDateError.textContent = "This date is incorrect"
+        regDateError.style = "color: red"
+        error++
+     }
+     //un num
+     if(!uniqueNumber.value){
+        uniqueNumber.style = "1px solid red"
+        uniqueNumberError.textContent = "Please fill in this field"
+        uniqueNumberError.style = "color: red"
+        errorr++
+     }
+
 
 
     if (error > 0) {
