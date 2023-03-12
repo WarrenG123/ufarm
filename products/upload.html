@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <title>Upload</title>
+
+
+    <Style>
+        .container-fluid{
+            background-color: azure;
+        }
+        .card-body{
+            background-color: white;
+        }
+    </Style>
+</head>
+
+<body>
+    <!-- nav starts Here -->
+
+    <!-- nav bar ends here -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card header">
+                        <h4>Upload here</h4>
+                    </div>
+                    <img src="" alt="food product" class="card-img-side">
+                    <div class="card-body">
+                        <form action="#" name="upload form" id="upload" onsubmit="" method="post">
+                            <div class="form form-group">
+                                <label>Product name</label>
+                                <input type="text" class="form-control" id="pName" name="product name">
+                                <small id="pNameErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Ward name</label>
+                                <input type="text" class="form-control" id="wd" name="ward name">
+                                <small id="wdErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Date</label>
+                                <input type="date" class="form-control" id="date" name="date">
+                                <small id="dateErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Unit price</label>
+                                <input type="text" class="form-control" id="uP" name="unit price">
+                                <small id="uPErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Quantity</label>
+                                <input type="text" class="form-control" id="qty" name="quantity">
+                                <small id="qtyErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Address</label>
+                                <input type="text" class="form-control" id="adr" name="address">
+                                <small id="adrErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Mode of payment</label>
+                                <label class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="cash" name="Cash"><span>Cash</span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="mMoney" name="mobile money"><span>Mobile Money</span>
+                                </label>
+                                <small id="payErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Mode of delivery</label>
+                                <label class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="pick" name="pickup"><span>Pick up</span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="hDeli" name="home delivery"><span>Home delivery</span>
+                                </label>
+                                <small id="deliErr"></small>
+                            </div>
+                            <div class="form form-group">
+                                <label>Produce type</label>
+                                <label class="form-check">
+                                    <input type="radio" class="form-check-input" id="org" name="pType"><span>Organic</span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="radio" class="form-check-input" id="nOrg" name="pType"><span>Non-organic</span>
+                                </label>
+                                <small id="typeErr"></small>
+                            </div>  
+                            <button class="btn-primary" id="submit">Submit</button>                       
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

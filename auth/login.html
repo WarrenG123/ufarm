@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <title>login</title>
     <style>
         .card {
@@ -15,22 +15,25 @@
 </head>
 
 <body>
+<!-- nav starts Here -->
+
+    <!-- nav bar ends here -->
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
                 <div class="card header">
                     <h1>Login Here</h1>
                 </div>
-                <img class="card-img-top" src="image/picture.png" alt="mtn" style="width: 100%;">
+                <img class="card-img-top" src="/image/picture.png" alt="mtn" style="width: 100%;">
                 <div class="card-body">
-                    <form action="#" id="loginForm" name="login">
+                    <form action="#" id="loginForm" name="login" method="post">
                         <div class="form row">
                             <div class="col form-group">
                                 <label>Unique number/id</label>
                                 <input class="form-control" type="number" id="uN" name="unique number">
                                 <small id="uNErr"></small>
                             </div>
-                            <div class="col form-group">
+                            <div class="col form-group mb-3">
                                 <label>Password</label>
                                 <input class="form-control" id="pwd" name="password" type="password">
                                 <small id="pwdErr"></small>
@@ -40,9 +43,9 @@
                     </form>
                 </div>
             </div>
-        </div>
+            <h4>If you dont have an account <a href="">register here</a></h4>
+        </div>        
     </div>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </html>
