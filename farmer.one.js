@@ -136,7 +136,19 @@ const validate = (event) => {
         activitiesError.style = "color: red"
         error++
     }
-
+    //reg
+    if (!regDate.value) {
+        regDate.style.border = "1px solid red"
+        regDateError.textContent = "Please fill in the date"
+        regDateError.style = "color: red"
+        error++
+    }
+    // else if (!regDate.value.match(getUTCDate())) {
+    //     regDate.style.border = "1px solid red"
+    //     regDateError.textContent = "This date is incorrect"
+    //     regDateError.style = "color: red"
+    //     error++
+    // }
     //un num
     if (!uniqueNumber.value) {
         uniqueNumber.style.border = "1px solid red"
@@ -151,24 +163,12 @@ const validate = (event) => {
         passwordError.style = "color: red"
         error++
     }
-    //reg
-    if (!regDate.value) {
-        regDate.style.border = "1px solid red"
-        regDateError.textContent = "Please fill in the date"
-        regDateError.style = "color: red"
-        error++
-    }
-    // else if (!regDate.value.match(getUTCDate())) {
-    //     regDate.style.border = "1px solid red"
-    //     regDateError.textContent = "This date is incorrect"
-    //     regDateError.style = "color: red"
-    //     error++
-    // }
 
 
-    if (error > 0) {
-        event.preventDefault()
-    }
+
+        if (error > 0) {
+            event.preventDefault()
+        }
 
 
 
