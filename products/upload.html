@@ -21,7 +21,7 @@
 
 <body>
     <!-- nav starts Here -->
-
+    <div w3-include-html="/includes/navbar.html"></div>
     <!-- nav bar ends here -->
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -32,7 +32,7 @@
                     </div>
                     <img src="" alt="food product" class="card-img-side">
                     <div class="card-body">
-                        <form action="#" name="upload form" id="upload" onsubmit="" method="post">
+                        <form action="#" name="upload form" id="upload" onsubmit="validate(event)" method="post">
                             <div class="form form-group">
                                 <label>Product name</label>
                                 <input type="text" class="form-control" id="pName" name="product name">
@@ -50,7 +50,7 @@
                             </div>
                             <div class="form form-group">
                                 <label>Unit price</label>
-                                <input type="text" class="form-control" id="uP" name="unit price">
+                                <input type="text" placeholder="UGX" class="form-control" id="uP" name="unit price">
                                 <small id="uPErr"></small>
                             </div>
                             <div class="form form-group">
@@ -101,6 +101,8 @@
         </div>
     </div>
     <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/js/uploadValidate.js"></script>
+    <script src="/includes/custom.js"></script>
 </body>
 
 </html>

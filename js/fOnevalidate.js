@@ -102,7 +102,7 @@ const validate = (event) => {
         error++
     }
     //nin
-    //   const ninNumberregex = /^     $/
+    //   const ninNumberregex = /^\CM\d{10}\LM$/
     if (!ninNumber.value) {
         ninNumber.style.border = "1px solid red"
         ninNumberError.textContent = "Please enter your NIN number"
