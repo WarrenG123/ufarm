@@ -8,12 +8,10 @@ const validate = (event) => {
     let female = document.getElementById("female");
     let phoneNumber = document.getElementById("pNum");
     let ninNumber = document.getElementById("nin");
-    let address = document.getElementById("adr");
-    let timePeriod = document.getElementById("tsa");
     let ward = document.getElementById("wd");
     let activities = document.getElementById("act");
     let regDate = document.getElementById("dr");
-    let uniqueNumber = document.getElementById("uN");
+    let uniqueid = document.getElementById("uI");
     let password = document.getElementById("pwd");
 
     //pick error
@@ -23,12 +21,10 @@ const validate = (event) => {
     let genderError = document.getElementById("gndErr");
     let phoneNumberError = document.getElementById("pNumErr");
     let ninNumberError = document.getElementById("ninErr");
-    let addressError = document.getElementById("adrErr");
-    let timePeriodError = document.getElementById("tsaErr");
     let wardError = document.getElementById("wdErr");
     let activitiesError = document.getElementById("actErr");
     let regDateError = document.getElementById("drErr");
-    let uniqueNumberError = document.getElementById("uNErr");
+    let uniqueIdError = document.getElementById("uIErr");
     let passwordError = document.getElementById("pwdErr");
 
 
@@ -58,7 +54,7 @@ const validate = (event) => {
         firstNameError.style = "color: red"
         error++
     }
-    // DOB
+    // // DOB
     if (!birthDate.value) {
         birthDate.style.border = "1px solid red"
         birthDateError.textContent = "Please fill in this field"
@@ -88,7 +84,7 @@ const validate = (event) => {
         phoneNumberError.style = "color: red"
         error++
     }
-    //nin
+    // //nin
     //   const ninNumberregex = /^     $/
     if (!ninNumber.value) {
         ninNumber.style.border = "1px solid red"
@@ -96,33 +92,13 @@ const validate = (event) => {
         ninNumberError.style = "color: red"
         error++
     }
-    // else if(!ninNumber.value.match(ninNumberregex)){
-    //     ninNumber.style.border = "1px solid red"
-    //     ninNumberError.innerHTML = "NIN has to be in thi format  "
-    //     ninNumberError.style = "color: red"
-    //     error++
-    // }
-    //address
-    if (!address.value) {
-        address.style.border = "1px solid red"
-        addressError.innerHTML = "Please indicate where your home is located"
-        addressError.style = "color: red"
-        error++
-    }
-    //time
-    if (!timePeriod.value) {
-        timePeriod.style.border = "1px solid red"
-        timePeriodError.textContent = "Please fill in this field"
-        timePeriodError.style = "color: red"
-        error++
-    }
-    else if (timePeriod.value < 10) {
-        timePeriod.style.border = "1px solid red"
-        timePeriodError.textContent = "You must have lived in this area for more than 10 years"
-        timePeriodError.style = "color: red"
-        error++
-    }
-    //ard
+    // // else if(!ninNumber.value.match(ninNumberregex)){
+    // //     ninNumber.style.border = "1px solid red"
+    // //     ninNumberError.innerHTML = "NIN has to be in thi format  "
+    // //     ninNumberError.style = "color: red"
+    // //     error++
+    // // }
+    // //ard
     if (!ward.value) {
         ward.style.border = "1px solid red"
         wardError.innerHTML = "Please enter the ward you belong to"
@@ -143,17 +119,17 @@ const validate = (event) => {
         regDateError.style = "color: red"
         error++
     }
-    // else if (!regDate.value.match()) {
-    //     regDate.style.border = "1px solid red"
-    //     regDateError.textContent = "This date is incorrect"
-    //     regDateError.style = "color: red"
-    //     error++
-    // }
-    //un num
-    if (!uniqueNumber.value) {
-        uniqueNumber.style.border = "1px solid red"
-        uniqueNumberError.textContent = "Please fill in this field"
-        uniqueNumberError.style = "color: red"
+    // // else if (!regDate.value.match()) {
+    // //     regDate.style.border = "1px solid red" 
+    // //     regDateError.textContent = "This date is incorrect"
+    // //     regDateError.style = "color: red"
+    // //     error++
+    // // }
+    //un id
+    if (!uniqueid.value) {
+        uniqueid.style.border = "1px solid red"
+        uniqueIdError.textContent = "Please fill in this field"
+        uniqueIdError.style = "color: red"
         error++
     }
     //password
@@ -165,17 +141,8 @@ const validate = (event) => {
     }
 
 
-
-        if (error > 0) {
-            event.preventDefault()
-        }
-
-
-
-
-
-
-
-
-
+    if (error > 0) {
+        event.preventDefault()
+    }
 }
+
