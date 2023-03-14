@@ -65,15 +65,15 @@ const validate = (event) => {
         birthDateError.style = "color: red"
         error++
     }
-    // // // gender
-    // // if (!(female.checked && male.checked)) {
-    // //     gender.innerHTML = "Pick your gender"
-    // //     genderError.style = "color: red"
-    // //     error++
-    // // }
-    // // else {
-    // //     genderError.textContent = "";
-    // // }
+    // gender
+    if (!(female.checked && male.checked)) {
+        genderError.innerHTML = "Pick your gender"
+        genderError.style = "color: red"
+        error++
+    }
+    else {
+        genderError.textContent = "";
+    }
     //phone number
     const phoneNumberregex = /^\+256\d{9}$/;
     if (!phoneNumber.value) {
@@ -143,7 +143,7 @@ const validate = (event) => {
         regDateError.style = "color: red"
         error++
     }
-    // else if (!regDate.value.match(getUTCDate())) {
+    // else if (!regDate.value.match()) {
     //     regDate.style.border = "1px solid red"
     //     regDateError.textContent = "This date is incorrect"
     //     regDateError.style = "color: red"
