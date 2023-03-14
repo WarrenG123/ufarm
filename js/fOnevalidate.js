@@ -15,6 +15,7 @@ const validate = (event) => {
     let regDate = document.getElementById("dr");
     let uniqueNumber = document.getElementById("uN");
     let password = document.getElementById("pwd");
+    let resid = document.getElementById("rT");
 
     //pick error
     let firstNameError = document.getElementById("fNameErr");
@@ -30,7 +31,7 @@ const validate = (event) => {
     let regDateError = document.getElementById("drErr");
     let uniqueNumberError = document.getElementById("uNErr");
     let passwordError = document.getElementById("pwdErr");
-
+    let residError = document.getElementById("rTErr")
 
     //for empty on name
     if (!firstName.value) {
@@ -41,7 +42,13 @@ const validate = (event) => {
     }
     else if (firstName.value.length < 5) {
         firstName.style.border = "1px solid red"
-        firstNameError.innerHTML = "first name should have atleast four letters"
+        firstNameError.innerHTML = "first name should have atleast five letters"
+        firstNameError.style = "color: red"
+        error++
+    }
+    else if(firstName.value.length > 50) {
+        firstName.style.border = "1px solid red"
+        firstNameError.innerHTML = "first name cannot have more than 50 letters"
         firstNameError.style = "color: red"
         error++
     }
@@ -52,9 +59,15 @@ const validate = (event) => {
         secondNameError.style = "color: red"
         error++
     }
-    else if (firstName.value.length < 5) {
+    else if (secondName.value.length < 5) {
+        secondName.style.border = "1px solid red"
+        secondNameError.innerHTML = "second name should have atleast five letters"
+        secondNameError.style = "color: red"
+        error++
+    }
+    else if (firstName.value.length > 50) {
         firstName.style.border = "1px solid red"
-        firstNameError.innerHTML = "first name should have atleast four letters"
+        firstNameError.innerHTML = "second name cannot have more than 50 letters"
         firstNameError.style = "color: red"
         error++
     }
@@ -93,6 +106,12 @@ const validate = (event) => {
     if (!ninNumber.value) {
         ninNumber.style.border = "1px solid red"
         ninNumberError.textContent = "Please enter your NIN number"
+        ninNumberError.style = "color: red"
+        error++
+    }
+     else if(ninNumber.value.length == 13){
+        ninNumber.style.border = "1px solid red"
+        ninNumberError.innerHTML = "NIN should have 13 characters"
         ninNumberError.style = "color: red"
         error++
     }
@@ -164,7 +183,13 @@ const validate = (event) => {
     //     regDateError.style = "color: red"
     //     error++
     // }
-
+    //resid
+    if(!resid.value) {
+        resid.style.border = "1px solid red"
+        residError.textContent = "Please enter your residence type"
+        residError.style ="color: red"
+        error++
+    }
 
     if (error > 0) {
         event.preventDefault()
