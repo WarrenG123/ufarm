@@ -103,7 +103,7 @@ const validate = (event) => {
         ninNumberError.textContent = "Please enter your NIN number";
         ninNumberError.style = "color: red";
         error++;
-    } else if (ninNumber.value.length == 13) {
+    } else if (!(ninNumber.value.length == 13)) {
         ninNumber.style.border = "1px solid red";
         ninNumberError.innerHTML = "NIN should have 13 characters";
         ninNumberError.style = "color: red";
