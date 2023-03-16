@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <style>
+       .image {
+            background-image: url("/image/farmland.jpg");
+            /* The image used */
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
+            height: 800px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+    </style>
     <title>farmer one</title>
   </head>
 
@@ -12,6 +28,7 @@
     <!-- nav starts Here -->
     <div w3-include-html="/includes/navbar.html"></div>
     <!-- nav bar ends here -->
+    <div class="image">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card">
@@ -137,6 +154,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- footer starts here -->
     <div w3-include-html="/includes/footer.html"></div>

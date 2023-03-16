@@ -10,22 +10,35 @@
 
   <style>
     .form-group {
-      background-color: azure
+      background-color: azure;
     }
 
     .card {
-      background-color: azure;
-      border-radius: 15cap;
+      border-radius: 130px;
     }
 
     .h1 {
       font-family: Arial, Helvetica, sans-serif;
       font-size: xx-small;
     }
+    .body{
+      background-color: blue;
+    }
+    .image {
+            background-image: url("/image/farmland.jpg");
+            /* The image used */
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
+            height: 1000px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
   </style>
-
-
-
 
 </head>
 
@@ -33,6 +46,7 @@
   <!-- nav starts Here -->
   <div w3-include-html="/includes/navbar.html"></div>
   <!-- nav bar ends here -->
+  <div class="image">
   <header>
     <h3>REGISTER HERE</h3>
     <h6>Note:This section is only for the agricultural officer </h6>
@@ -126,10 +140,9 @@
       </div>
     </div>
   </div>
+  </div>
   <footer>
-    <div class="row justify-content-center"></div>
-    Ufarm.ug
-  </footer>
+    
   <!-- footer starts here -->
   <div w3-include-html="/includes/footer.html"></div>
   <!-- footer ends here -->

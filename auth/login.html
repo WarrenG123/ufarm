@@ -8,8 +8,25 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
     <title>login</title>
     <style>
-        .card {
-            background-color: rgb(84, 235, 235);
+        .row {
+
+        }
+        .image {
+            background-image: url("/image/farmland.jpg");
+            /* The image used */
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
+            height: 800px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+        .header{
+            padding-top: 200px;
         }
     </style>
 </head>
@@ -18,32 +35,38 @@
     <!-- nav starts Here -->
     <div w3-include-html="/includes/navbar.html"></div>
     <!-- nav bar ends here -->
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card header">
-                    <h1>Login Here</h1>
-                </div>
-                <img class="card-img-top" src="/image/picture.png" alt="mtn" style="width: 100%" />
-                <div class="card-body">
-                    <form action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
-                        <div class="form row">
-                            <div class="col form-group">
-                                <label>Unique number/id</label>
-                                <input class="form-control" type="number" id="uN" name="unique number" />
-                                <small id="uNErr"></small>
-                            </div>
-                            <div class="col form-group mb-3">
-                                <label>Password</label>
-                                <input class="form-control" id="pwd" name="password" type="password" />
-                                <small id="pwdErr"></small>
-                            </div>
+
+    <div class="image">
+        <div class="container-fluid">
+            <div class=" row justify-content-center">
+                <div class="col-md-6">
+                     <div class="header">
+                        <h1>Login Here</h1>
+                    </div>
+                    <div class="card bg-secondary">
+                       
+                        <img class="card-img-top" src="" alt="profile picture" style="width: 100%" />
+                        <div class="card-body">
+                            <form action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
+                                <div class="form row">
+                                    <div class="col form-group">
+                                        <label>Unique number/id</label>
+                                        <input class="form-control" type="number" id="uN" name="unique number" />
+                                        <small id="uNErr"></small>
+                                    </div>
+                                    <div class="col form-group mb-3">
+                                        <label>Password</label>
+                                        <input class="form-control" id="pwd" name="password" type="password" />
+                                        <small id="pwdErr"></small>
+                                    </div>
+                                </div>
+                                <button id="login" class="btn btn-primary">LOGIN</button>
+                            </form>
                         </div>
-                        <button id="login" class="btn btn-primary">LOGIN</button>
-                    </form>
+                    </div>
+                    <h4>If you dont have an account <a href="">register here</a></h4>
                 </div>
             </div>
-            <h4>If you dont have an account <a href="">register here</a></h4>
         </div>
     </div>
     <!-- footer starts here -->
