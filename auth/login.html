@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>login</title>
     <style>
-        .row {
-
+        .bi-person-circle {
+            font-size: 100px;
+            
         }
         .image {
             background-image: url("/image/farmland.jpg");
@@ -28,6 +30,15 @@
         .header{
             padding-top: 200px;
         }
+        .bi-person-circle{
+            padding-left: 260px;
+        }
+        h4{
+            color: rgb(1, 2, 1);
+        }
+        /* .logincard{
+            color: rgb(160, 26, 26);
+        } */
     </style>
 </head>
 
@@ -43,15 +54,15 @@
                      <div class="header">
                         <h1>Login Here</h1>
                     </div>
-                    <div class="card bg-secondary">
-                       
-                        <img class="card-img-top" src="" alt="profile picture" style="width: 100%" />
+                    <div class="card bg-secondary" class="logincard">
+                        <i class="bi bi-person-circle"></i>
+                        
                         <div class="card-body">
                             <form action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
                                 <div class="form row">
                                     <div class="col form-group">
-                                        <label>Unique number/id</label>
-                                        <input class="form-control" type="number" id="uN" name="unique number" />
+                                        <label>Username</label>
+                                        <input class="form-control" type="text" id="uN" name="username" />
                                         <small id="uNErr"></small>
                                     </div>
                                     <div class="col form-group mb-3">
@@ -74,6 +85,7 @@
     <!-- footer ends here -->
     <script src="/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/includes/custom.js"></script>
+    <script src="/js/loginValidate.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,10 @@ const validate = (event) => {
         passwordError.style = "color: red"
         error++
     }
-
+    else{
+        password.style.border = "1px solid green"
+        passwordError.textContent = ""
+    }
 
     if(error > 0) {
         event.preventdefault()
