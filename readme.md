@@ -5,7 +5,6 @@ get date function
 regex for nin
 color scheme
 styling body
-See all icn
 
 to do
 products and cart pages
