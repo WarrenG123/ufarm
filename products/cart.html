@@ -11,7 +11,10 @@
     <title>cart</title>
 
     <style>
-
+        .checkbutton {
+            text-align: center;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -26,18 +29,25 @@
             <div class="col-8">
                 <article class="card">
                     <header>CART</header>
-                    
+
                 </article>
             </div>
             <div class="col-4">
                 <article class="card">
                     <h6>CART SUMMARY</h6>
-                    <div class="total">total</div>
+                    <form action="#" method="post" class="form-inline">
+                        <label>Total:</label>
+                        <input class="form-control" type="text" id="total" name="total" placeholder="UGX 0000"/>
+                        <small id="tlErr"></small>
+                        <div class="checkbutton">
+                            <button id="checkout" class="btn btn-success">CHECKOUT</button>
+                        </div>
+                    </form>
                 </article>
             </div>
         </div>
     </div>
-    
+
     <!-- footer starts here -->
     <div w3-include-html="/includes/footer.html"></div>
     <!-- footer ends here -->
