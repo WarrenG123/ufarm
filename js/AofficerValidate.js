@@ -92,7 +92,7 @@ const validate = (event) => {
     } else if (!phoneNumber.value.match(phoneNumberregex)) {
         phoneNumber.style.border = "1px solid red";
         phoneNumberError.innerHTML =
-            "phone number should be in this format +256 7********";
+            "phone number should be in this format +256 7*******";
         phoneNumberError.style = "color: red";
         error++;
     }
@@ -135,21 +135,6 @@ const validate = (event) => {
         timePeriodError.style = "color: red";
         error++;
     }
-    //ard
-    if (!ward.value) {
-        ward.style.border = "1px solid red";
-        wardError.innerHTML = "Please enter the ward you belong to";
-        wardError.style = "color: red";
-        error++;
-    }
-    //activities
-    if (!activities.value) {
-        activities.style.border = "1px solid red";
-        activitiesError.innerHTML = "Please fill in the activities you carry out";
-        activitiesError.style = "color: red";
-        error++;
-    }
-
     //un num
     if (!uniqueNumber.value) {
         uniqueNumber.style.border = "1px solid red";

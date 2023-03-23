@@ -41,6 +41,12 @@ const validate = (event) => {
         firstNameError.style = "color: red"
         error++
     }
+    else if (firstName.value.length > 50) {
+        firstName.style.border = "1px solid red";
+        firstNameError.innerHTML = "first name cannot have more than 50 letters";
+        firstNameError.style = "color: red";
+        error++;
+    }
     //for second name
     if (!secondName.value) {
         secondName.style.border = "1px solid red"
@@ -48,11 +54,17 @@ const validate = (event) => {
         secondNameError.style = "color: red"
         error++
     }
-    else if (firstName.value.length < 5) {
-        firstName.style.border = "1px solid red"
-        firstNameError.innerHTML = "first name should have atleast four letters"
-        firstNameError.style = "color: red"
+    else if (secondName.value.length < 5) {
+        secondName.style.border = "1px solid red"
+        secondNameError.innerHTML = "first name should have atleast four letters"
+        secondNameError.style = "color: red"
         error++
+    }
+    else if (secondName.value.length > 50) {
+        secondName.style.border = "1px solid red";
+        secondNameError.innerHTML = "second name cannot have more than 50 letters";
+        secondNameError.style = "color: red";
+        error++;
     }
     // // DOB
     if (!birthDate.value) {
@@ -80,7 +92,7 @@ const validate = (event) => {
     }
     else if (!phoneNumber.value.match(phoneNumberregex)) {
         phoneNumber.style.border = "1px solid red"
-        phoneNumberError.innerHTML = "phone number should be in thi format +256 700000000"
+        phoneNumberError.innerHTML = "phone number should be in thi format +256 7********"
         phoneNumberError.style = "color: red"
         error++
     }
