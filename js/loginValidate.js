@@ -2,9 +2,11 @@ const validate = (event) => {
     let error = 0;
     //input
     let password = document.getElementById("pwd");
+    let name = document.getElementById("uN");
 
     //error
     let passwordError = document.getElementById("pwdErr");
+    let nameErr = document.getElementById("uNErr");
 
 
     //pwd
@@ -18,7 +20,6 @@ const validate = (event) => {
         password.style.border = "1px solid green"
         passwordError.textContent = ""
     }
-
     if(error > 0) {
         event.preventdefault()
     }

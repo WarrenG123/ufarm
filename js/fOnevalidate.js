@@ -75,7 +75,7 @@ const validate = (event) => {
         error++;
     }
     // gender
-    if (!(female.checked && male.checked)) {
+    if (!(female.checked || male.checked)) {
         genderError.innerHTML = "Pick your gender";
         genderError.style = "color: red";
         error++;
