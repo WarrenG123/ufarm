@@ -46,7 +46,7 @@ const validate = (event) =>{
     // const priceregex = /^\UGX\d{}
     if(!price.value) {
         price.style.border = "1px solid red"
-        priceError.textContent = "Please enter the unit price of the product"
+        priceError.textContent = "Please enter the unit price of the product in UGX"
         priceError.style = "color: red"
         error++  
     }

@@ -9,3 +9,6 @@ to do
  cart page
 home page
 navbar
+dashboards(each user)
+input profiles(roles) in login
+creation of authentication

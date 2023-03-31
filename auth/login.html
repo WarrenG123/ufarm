@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <title>login</title>
     <style>
         .bi-person-circle {
             font-size: 100px;
-            
         }
+
         .image {
             background-image: url("/image/farmland.jpg");
             /* The image used */
@@ -27,15 +27,19 @@
             background-size: cover;
             /* Resize the background image to cover the entire container */
         }
-        .header{
+
+        .header {
             padding-top: 200px;
         }
-        .bi-person-circle{
+
+        .bi-person-circle {
             padding-left: 260px;
         }
-        h4{
+
+        h4 {
             color: rgb(1, 2, 1);
         }
+
         /* .logincard{
             color: rgb(160, 26, 26);
         } */
@@ -49,14 +53,14 @@
 
     <div class="image">
         <div class="container-fluid">
-            <div class=" row justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-md-6">
-                     <div class="header">
+                    <div class="header">
                         <h1>Login Here</h1>
                     </div>
                     <div class="card bg-secondary" class="logincard">
                         <i class="bi bi-person-circle"></i>
-                        
+
                         <div class="card-body">
                             <form action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
                                 <div class="form row">
@@ -69,6 +73,19 @@
                                         <label>Password</label>
                                         <input class="form-control" id="pwd" name="password" type="password" />
                                         <small id="pwdErr"></small>
+                                    </div>
+                                    <div class="form row">
+                                        <div class="col form-group col-4">
+                                            <label>Role</label>
+                                            <select class="form-control" id="role" name="role">
+                                                <option value="">(Select a role)</option>
+                                                <option value="FarmerOne">Customer</option>
+                                                <option value="AgricOfficer">Agricultural Officer</option>
+                                                <option value="UrbanFarmer">Urban Farmer</option>
+                                                <option value="FarmerOne">Farmer One</option>
+                                            </select>
+                                            <small id="roleErr"></small>
+                                        </div>
                                     </div>
                                 </div>
                                 <button id="login" class="btn btn-primary">LOGIN</button>
