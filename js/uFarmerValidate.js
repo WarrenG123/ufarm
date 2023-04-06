@@ -9,7 +9,9 @@ const validate = (event) => {
     let phoneNumber = document.getElementById("pNum");
     let ninNumber = document.getElementById("nin");
     let ward = document.getElementById("wd");
-    let activities = document.getElementById("act");
+    let poultry = document.getElementById("poultry");
+    let horti = document.getElementById("hort");
+    let dairy = document.getElementById("dairy");
     let regDate = document.getElementById("dr");
     let uniqueid = document.getElementById("uI");
     let password = document.getElementById("pwd");
@@ -127,21 +129,20 @@ const validate = (event) => {
         ninNumberError.textContent = "";
     }
     // //ard
-    if (!ward.value) {
-        ward.style.border = "1px solid red"
-        wardError.innerHTML = "Please enter the ward you belong to"
-        wardError.style = "color: red"
-        error++
-    } else {
-        ward.style.border = "1px solid green";
-        wardError.textContent = "";
-    }
+     // if (!ward.value) {
+    //     ward.style.border = "1px solid red";
+    //     wardError.innerHTML = "Please select the ward";
+    //     wardError.style = "color: red";
+    //     error++;
+    // } else {
+    //     ward.style.border = "1px solid green";
+    //     wardError.textContent = "";
+    // }
     //activities
-    if (!activities.value) {
-        activities.style.border = "1px solid red"
-        activitiesError.innerHTML = "Please fill in the activities you carry out"
-        activitiesError.style = "color: red"
-        error++
+    if (!(poultry.checked || horti.checked || dairy.checked)) {
+        activitiesError.innerHTML = "Please select atleast one activity carried out";
+        activitiesError.style = "color: red";
+        error++;
     } else {
         activities.style.border = "1px solid green";
         activitiesError.textContent = "";

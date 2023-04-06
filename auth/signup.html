@@ -9,38 +9,65 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <title>Sign up</title>
 </head>
+<style>
+    .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
 
 <body>
+     <!-- nav starts Here -->
+     <div w3-include-html="/includes/navbar.html"></div>
+     <!-- nav bar ends here -->
     <div class="row justify-content-center">
         <div class="col-5">
             <div class="card">
                 <div class="card-header">SIGN UP</div>
                 <div class="card-body">
                     <form action="/action_page.php">
-                        <div class="form-group">
-                            <label for="email">First name:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Last name:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">First name:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">First name:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">First name:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-                        </div>
+                        <fieldset>
+                            <legend>Bio-Data</legend>
+                            <div class="form-group">
+                                <label for="firstname">First name:</label>
+                                <input type="text" class="form-control" id="fN">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Last name:</label>
+                                <input type="text" class="form-control" id="lN">
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of birth:</label>
+                                <input type="date" class="form-control" id="dob">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender:</label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male"
+                                        value="male"><span>Male</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="female"><span>Female</span>
+                                </label>
+                                <small id="gndErr"></small>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Authentication</legend>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">User name:</label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd">
+                            </div>
+                        </fieldset>
                         <div class="form-group form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox"> Remember me
@@ -52,6 +79,11 @@
             </div>
         </div>
     </div>
+       <!-- footer starts here -->
+       <div w3-include-html="/includes/footer.html"></div>
+       <!-- footer ends here -->
+       <script src="/bootstrap/js/bootstrap.js"></script>
+       <script src="/includes/custom.js"></script>
 </body>
 
 </html>

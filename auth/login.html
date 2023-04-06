@@ -28,16 +28,23 @@
             /* Resize the background image to cover the entire container */
         }
 
-        .header {
-            padding-top: 200px;
+        .row{
+            padding-top: 40px;
         }
 
         .bi-person-circle {
-            padding-left: 260px;
+            padding-left: 150px;
         }
 
-        h4 {
+        h1 {
             color: rgb(1, 2, 1);
+            
+        }
+        .login{
+            background-color: azure;
+        }
+        .button{
+            margin-top: 20px;
         }
 
         /* .logincard{
@@ -54,28 +61,27 @@
     <div class="image">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="header">
-                        <h1>Login Here</h1>
-                    </div>
-                    <div class="card bg-secondary" class="logincard">
-                        <i class="bi bi-person-circle"></i>
-
+                <div class="col-md-4">
+                    <div class="card" class="logincard">
+                        <div class="card-header">
+                            <h1>Login Here</h1>
+                        </div>
                         <div class="card-body">
-                            <form action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
+                            <form class="login" action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
+                                <i class="bi bi-person-circle"></i>
                                 <div class="form row">
-                                    <div class="col form-group">
+                                    <div class=" form-group">
                                         <label>Username</label>
                                         <input class="form-control" type="text" id="uN" name="username" />
                                         <small id="uNErr"></small>
                                     </div>
-                                    <div class="col form-group mb-3">
+                                    <div class="form-group">
                                         <label>Password</label>
                                         <input class="form-control" id="pwd" name="password" type="password" />
                                         <small id="pwdErr"></small>
                                     </div>
                                     <div class="form row">
-                                        <div class="col form-group col-4">
+                                        <div class="form-group">
                                             <label>Role</label>
                                             <select class="form-control" id="role" name="role">
                                                 <option value="">(Select a role)</option>
@@ -88,7 +94,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="button">
                                 <button id="login" class="btn btn-primary">LOGIN</button>
+                                </div>
                             </form>
                         </div>
                     </div>
