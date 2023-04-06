@@ -38,8 +38,14 @@
                                 <small id="pNameErr"></small>
                             </div>
                             <div class="form form-group">
-                                <label>Ward name</label>
-                                <input type="text" class="form-control" id="wd" name="ward name">
+                                <label>Ward</label>
+                                <select class="form-control" id="ward" name="ward">
+                                    <option value="">(Select a ward)</option>
+                                    <option value="AgricOfficer">1</option>
+                                    <option value="UrbanFarmer">2</option>
+                                    <option value="FarmerOne">3</option>
+                                    <option value="FarmerOne">4</option>
+                                </select>
                                 <small id="wdErr"></small>
                             </div>
                             <div class="form form-group">
@@ -65,30 +71,30 @@
                             <div class="form form-group">
                                 <label>Mode of payment</label>
                                 <label class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="cash" name="Cash"><span>Cash</span>
+                                    <input type="checkbox" class="form-check-input" id="cash" name="Cash" value="Cash"><span>Cash</span>
                                 </label>
                                 <label class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="mMoney" name="mobile money"><span>Mobile Money</span>
+                                    <input type="checkbox" class="form-check-input" id="mMoney" name="mobile money" value="Mobile Money"><span>Mobile Money</span>
                                 </label>
                                 <small id="payErr"></small>
                             </div>
                             <div class="form form-group">
                                 <label>Mode of delivery</label>
                                 <label class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="pick" name="pickup"><span>Pick up</span>
+                                    <input type="checkbox" class="form-check-input" id="pick" name="pickup" value="Pickup"><span>Pick up</span>
                                 </label>
                                 <label class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="hDeli" name="home delivery"><span>Home delivery</span>
+                                    <input type="checkbox" class="form-check-input" id="hDeli" name="home delivery" value="Home Delivery"><span>Home delivery</span>
                                 </label>
                                 <small id="deliErr"></small>
                             </div>
                             <div class="form form-group">
                                 <label>Produce type</label>
                                 <label class="form-check">
-                                    <input type="radio" class="form-check-input" id="org" name="pType"><span>Organic</span>
+                                    <input type="radio" class="form-check-input" id="org" name="pType" value="organic"><span>Organic</span>
                                 </label>
                                 <label class="form-check">
-                                    <input type="radio" class="form-check-input" id="nOrg" name="pType"><span>Non-organic</span>
+                                    <input type="radio" class="form-check-input" id="nOrg" name="pType" value="Non-organic"><span>Non-organic</span>
                                 </label>
                                 <small id="typeErr"></small>
                             </div>  

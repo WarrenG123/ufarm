@@ -46,6 +46,9 @@ const validate = (event) => {
         firstNameError.innerHTML = "first name cannot have more than 50 letters";
         firstNameError.style = "color: red";
         error++;
+    } else {
+        firstName.style.border = "1px solid green";
+        firstNameError.textContent = "";
     }
     //for second name
     if (!secondName.value) {
@@ -65,16 +68,22 @@ const validate = (event) => {
         secondNameError.innerHTML = "second name cannot have more than 50 letters";
         secondNameError.style = "color: red";
         error++;
+    } else {
+        secondName.style.border = "1px solid green";
+        secondNameError.textContent = "";
     }
     // // DOB
     if (!birthDate.value) {
-        birthDate.style.border = "1px solid red"
-        birthDateError.textContent = "Please fill in this field"
-        birthDateError.style = "color: red"
+        birthDate.style.border = "1px solid red";
+        birthDateError.textContent = "Please fill in this field";
+        birthDateError.style = "color: red";
         error++
+    } else {
+        birthDate.style.border = "1px solid green";
+        birthDateError.textContent = "";
     }
     // gender
-    if (!(female.checked && male.checked)) {
+    if (!(female.checked || male.checked)) {
         genderError.innerHTML = "Pick your gender"
         genderError.style = "color: red"
         error++
@@ -95,6 +104,9 @@ const validate = (event) => {
         phoneNumberError.innerHTML = "phone number should be in thi format +256 7********"
         phoneNumberError.style = "color: red"
         error++
+    } else {
+        phoneNumber.style.border = "1px solid green";
+        phoneNumberError.textContent = "";
     }
     // //nin
     //   const ninNumberregex = /^     $/
@@ -110,12 +122,19 @@ const validate = (event) => {
     // //     ninNumberError.style = "color: red"
     // //     error++
     // // }
+    else {
+        ninNumber.style.border = "1px solid green";
+        ninNumberError.textContent = "";
+    }
     // //ard
     if (!ward.value) {
         ward.style.border = "1px solid red"
         wardError.innerHTML = "Please enter the ward you belong to"
         wardError.style = "color: red"
         error++
+    } else {
+        ward.style.border = "1px solid green";
+        wardError.textContent = "";
     }
     //activities
     if (!activities.value) {
@@ -123,6 +142,9 @@ const validate = (event) => {
         activitiesError.innerHTML = "Please fill in the activities you carry out"
         activitiesError.style = "color: red"
         error++
+    } else {
+        activities.style.border = "1px solid green";
+        activitiesError.textContent = "";
     }
     //reg
     if (!regDate.value) {
@@ -137,19 +159,37 @@ const validate = (event) => {
     // //     regDateError.style = "color: red"
     // //     error++
     // // }
+    else {
+        regDate.style.border = "1px solid green";
+        regDateError.textContent = "";
+    }
     //un id
+    const idregex = /^UF-([0-9]{3})+$/;
     if (!uniqueid.value) {
         uniqueid.style.border = "1px solid red"
         uniqueIdError.textContent = "Please fill in this field"
         uniqueIdError.style = "color: red"
         error++
+    } else if (!uniqueid.value.match(idregex)) {
+        uniqueid.style.border = "1px solid red"
+        uniqueIdError.innerHTML = "Wrong format of id"
+        uniqueIdError.style = "color: red"
+        error++
+    }
+    else {
+        uniqueid.style.border = "1px solid green";
+        uniqueIdError.textContent = "";
     }
     //password
+    //const passregex =
     if (!password.value) {
         password.style.border = "1px solid red"
         passwordError.textContent = "Please fill in your password"
         passwordError.style = "color: red"
         error++
+    } else {
+        password.style.border = "1px solid green";
+        passwordError.textContent = "";
     }
 
 
