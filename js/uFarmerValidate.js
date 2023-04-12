@@ -3,7 +3,7 @@ const validate = (event) => {
     //pick input
     let firstName = document.getElementById("fName");
     let secondName = document.getElementById("sName");
-    let birthDate = document.getElementById("db");
+    let birthDate = document.getElementById("db"); //need to validate age
     let male = document.getElementById("male");
     let female = document.getElementById("female");
     let phoneNumber = document.getElementById("pNum");

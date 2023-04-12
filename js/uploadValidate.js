@@ -1,6 +1,7 @@
 const validate = (event) =>{
     let error = 0
     //pick input
+    let image = document.getElementById("pImage");
     let product = document.getElementById("pName");
     let ward = document.getElementById("ward");
     let date = document.getElementById("date");
@@ -15,6 +16,7 @@ const validate = (event) =>{
     let nonOr = document.getElementById("nOrg");
 
     //pick error
+    let imageErr = document.getElementById("imgErr");
     let productError = document.getElementById("pNameErr");
     let wardError = document.getElementById("wdErr");
     let dateError = document.getElementById("dateErr");
@@ -25,6 +27,15 @@ const validate = (event) =>{
     let deliverErr = document.getElementById("deliErr");
     let typeError = document.getElementById("typeErr");
 
+    if(!image.value) {
+        image.style.border = "1px solid red"
+        imageErr.textContent = "Please insert the product image"
+        imageErr.style = "color: red"
+        error++
+    }else {
+        image.style.border = "1px solid green";
+        imageErr.textContent = "";
+    }
     if(!product.value) {
         product.style.border = "1px solid red"
         productError.textContent = "Enter the product name"
@@ -103,7 +114,7 @@ const validate = (event) =>{
         deliverErr.textContent = "";
     }
     
-    if(!(organic.checked && nonOr.checked)) {
+    if(!(organic.checked || nonOr.checked)) {
         typeError.textContent = "Select the type of product"
         typeError.style = "color: red"
         error++  

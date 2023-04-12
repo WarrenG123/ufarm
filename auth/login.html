@@ -27,29 +27,22 @@
             background-size: cover;
             /* Resize the background image to cover the entire container */
         }
-
-        .row{
+        .row {
             padding-top: 40px;
         }
-
         .bi-person-circle {
-            padding-left: 150px;
+            padding-left: 130px;
         }
-
         h1 {
             color: rgb(1, 2, 1);
-            
         }
-        .login{
-            background-color: azure;
-        }
-        .button{
+        .button {
             margin-top: 20px;
         }
-
-        /* .logincard{
-            color: rgb(160, 26, 26);
-        } */
+        .logincard{
+            
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -64,43 +57,47 @@
                 <div class="col-md-4">
                     <div class="card" class="logincard">
                         <div class="card-header">
-                            <h1>Login Here</h1>
+                            <h4>Login Here</h4>
                         </div>
                         <div class="card-body">
-                            <form class="login" action="#" id="loginForm" name="login" onsubmit="validate(event)" method="post">
+                            <form class="login" action="#" id="loginForm" name="login" onsubmit=" return validate (event)"
+                                method="post">
                                 <i class="bi bi-person-circle"></i>
                                 <div class="form row">
                                     <div class=" form-group">
                                         <label>Username</label>
-                                        <input class="form-control" type="text" id="uN" name="username" />
+                                        <input class="form-control" type="text" id="uN" name="username"/>
                                         <small id="uNErr"></small>
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input class="form-control" id="pwd" name="password" type="password" />
+                                        <input class="form-control" id="pwd" name="password" type="password"/>
                                         <small id="pwdErr"></small>
                                     </div>
-                                    <div class="form row">
-                                        <div class="form-group">
-                                            <label>Role</label>
-                                            <select class="form-control" id="role" name="role">
-                                                <option value="">(Select a role)</option>
-                                                <option value="FarmerOne">Customer</option>
-                                                <option value="AgricOfficer">Agricultural Officer</option>
-                                                <option value="UrbanFarmer">Urban Farmer</option>
-                                                <option value="FarmerOne">Farmer One</option>
-                                            </select>
-                                            <small id="roleErr"></small>
-                                        </div>
+                                    <div class="form-group">
+                                        <label>Role</label>
+                                        <select class="form-control" id="role" name="role">
+                                            <option value="">(Select a role)</option>
+                                            <option value="FarmerOne">Customer</option>
+                                            <option value="AgricOfficer">Agricultural Officer</option>
+                                            <option value="UrbanFarmer">Urban Farmer</option>
+                                            <option value="FarmerOne">Farmer One</option>
+                                        </select>
+                                        <small id="roleErr"></small>
                                     </div>
+
                                 </div>
                                 <div class="button">
-                                <button id="login" class="btn btn-primary">LOGIN</button>
+                                    <button id="submit" class="btn btn-primary">LOGIN</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <h4>If you dont have an account <a href="">register here</a></h4>
+                    <div class="card bg-success">
+                        <div class="card-body">
+                            <h4>If you dont have an account <a href="/auth/signup.html">register here</a></h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
