@@ -15,11 +15,13 @@
             text-align: center;
             margin-top: 10px;
         }
-        .summary{
+
+        .summary {
             margin-bottom: 200px;
         }
-        article{
-            border-style:groove;
+
+        article {
+            border-style: groove;
             border-radius: 10px;
             background-color: whitesmoke;
         }
@@ -33,51 +35,66 @@
     <!-- nav bar ends here -->
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-8">
-                <article class="">
-                    <header>
-                        <h4>Cart</h4>
-                    </header>
                     <div class="row">
-                        <div class="col 4">
-                            image
+                        <div class="col-8">
+                            <article>
+                                <header>
+                                    <h4>Cart</h4>
+                                </header>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="item-image.jpg" alt="Item image">
+                                    </div>
+                                    <div class="col">
+                                        <h5>Item Name</h5>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" value="1">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" value="1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="item-image.jpg" alt="Item image">
+                                    </div>
+                                    <div class="col">
+                                        <h5>Item Name</h5>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" value="1">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" value="2000">
+                                    </div>
+
+                            </article>
                         </div>
-                        <div class="col 4"> 
-                            name
-                        </div>
-                        <div class="col 4">
-                            quantity
-                        </div>
-                        <div class="col 4">
-                            price
+                        <div class="col-4">
+                            <article class=" summary">
+                                <h4>Cart summary</h4>
+                                <form action="#" method="post" class="form-inline">
+                                    <label>Total:</label>
+                                    <input class="form-control" type="text" id="total" name="total"
+                                        placeholder="UGX 0000" />
+                                    <small id="tlErr"></small>
+                                    <div class="checkbutton">
+                                        <button id="checkout" class="btn btn-success">CHECKOUT</button>
+                                    </div>
+                                </form>
+                            </article>
                         </div>
                     </div>
-                </article>
             </div>
-            <div class="col-4">
-                <article class=" summary">
-                    <h4>Cart summary</h4>
-                    <form action="#" method="post" class="form-inline">
-                        <label>Total:</label>
-                        <input class="form-control" type="text" id="total" name="total" placeholder="UGX 0000" />
-                        <small id="tlErr"></small>
-                        <div class="checkbutton">
-                            <button id="checkout" class="btn btn-success">CHECKOUT</button>
-                        </div>
-                    </form>
-                </article>
-            </div>
-        </div>
-    </div>
 
-    <!-- footer starts here -->
-    <div w3-include-html="/includes/footer.html"></div>
-    <!-- footer ends here -->
+            <!-- footer starts here -->
+            <div w3-include-html="/includes/footer.html"></div>
+            <!-- footer ends here -->
 
-    <script src="/includes/custom.js"></script>
-    <script src="/bootstrap/js/bootstrap.js"></script>
-    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+            <script src="/includes/custom.js"></script>
+            <script src="/bootstrap/js/bootstrap.js"></script>
+            <script src="/bootstrap/js/bootstrap.bundle.js"></script>
 
 </body>
 

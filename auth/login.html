@@ -11,6 +11,7 @@
     <style>
         .bi-person-circle {
             font-size: 100px;
+            margin-left: 120px;
         }
 
         .image {
@@ -27,21 +28,27 @@
             background-size: cover;
             /* Resize the background image to cover the entire container */
         }
+
         .row {
             padding-top: 40px;
         }
-        .bi-person-circle {
-            padding-left: 130px;
-        }
+
         h1 {
             color: rgb(1, 2, 1);
         }
+
         .button {
             margin-top: 20px;
         }
-        .logincard{
-            
+/* 
+        .logincard {
             padding-bottom: 20px;
+        } */
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -55,45 +62,49 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card" class="logincard">
-                        <div class="card-header">
-                            <h4>Login Here</h4>
-                        </div>
-                        <div class="card-body">
-                            <form class="login" action="#" id="loginForm" name="login" onsubmit=" return validate (event)"
-                                method="post">
-                                <i class="bi bi-person-circle"></i>
-                                <div class="form row">
-                                    <div class=" form-group">
-                                        <label>Username</label>
-                                        <input class="form-control" type="text" id="uN" name="username"/>
-                                        <small id="uNErr"></small>
+                    <div class="card-container">
+                        <div class="card" class="logincard">
+                            <div class="card-header">
+                                <h4>Login Here</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="login" action="#" id="loginForm" name="login"
+                                    onsubmit=" return validate (event)" method="post">
+                                    <div class="form row">
+                                        <i class="bi bi-person-circle"></i>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input class="form-control" id="pwd" name="password" type="password"/>
-                                        <small id="pwdErr"></small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Role</label>
-                                        <select class="form-control" id="role" name="role">
-                                            <option value="">(Select a role)</option>
-                                            <option value="FarmerOne">Customer</option>
-                                            <option value="AgricOfficer">Agricultural Officer</option>
-                                            <option value="UrbanFarmer">Urban Farmer</option>
-                                            <option value="FarmerOne">Farmer One</option>
-                                        </select>
-                                        <small id="roleErr"></small>
-                                    </div>
+                                    <div class="form row">
+                                        <div class=" form-group">
+                                            <label>Username</label>
+                                            <input class="form-control" type="text" id="uN" name="username" />
+                                            <small id="uNErr"></small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input class="form-control" id="pwd" name="password" type="password" />
+                                            <small id="pwdErr"></small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Role</label>
+                                            <select class="form-control" id="role" name="role">
+                                                <option value="">(Select a role)</option>
+                                                <option value="FarmerOne">Customer</option>
+                                                <option value="AgricOfficer">Agricultural Officer</option>
+                                                <option value="UrbanFarmer">Urban Farmer</option>
+                                                <option value="FarmerOne">Farmer One</option>
+                                            </select>
+                                            <small id="roleErr"></small>
+                                        </div>
 
-                                </div>
-                                <div class="button">
-                                    <button id="submit" class="btn btn-primary">LOGIN</button>
-                                </div>
-                            </form>
+                                    </div>
+                                    <div class="button">
+                                        <button id="submit" class="btn btn-primary">LOGIN</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="card bg-success">
+                    <div class="card bg-success" style="margin-top: 20px;">
                         <div class="card-body">
                             <h4>If you dont have an account <a href="/auth/signup.html">register here</a></h4>
                         </div>

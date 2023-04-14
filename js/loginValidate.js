@@ -28,6 +28,6 @@ const validate = (event) => {
         error++;
     }
     if (error > 0) {
-        event.preventdefault();
+        event.preventDefault();
     }
 }
