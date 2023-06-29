@@ -1,14 +1,2 @@
-
-styling cards
-get date function
-regex for nin
-color scheme
-styling body
-
-to do
- cart page
-home page
-navbar
-dashboards(each user)
-input profiles(roles) in login
-creation of authentication
+#Assessment project
+I was tasked with creating a project to connect urban farmers to customers 
